@@ -11,14 +11,14 @@ public:
     };
     
     int romanToInt(string s) {
+        const int MAX = s.length() - 1;
         int number = 0;
-        int max = s.length() - 1;
         
         if (s.length() == 1) {
             return symbols[s[0]];
         }
         
-        for (int i = 0; i < max; i++) {
+        for (int i = 0; i < MAX; i++) {
             if (symbols[s[i]] < symbols[s[i+1]]) {
                 number += symbols[s[i+1]] - symbols[s[i]];
                 i++;
@@ -26,7 +26,7 @@ public:
                 number += symbols[s[i]];
             }
                             
-            if (i == max - 1) {
+            if (i == MAX - 1) {
                 number += symbols[s[i+1]];
             }
         }
