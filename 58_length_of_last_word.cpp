@@ -7,7 +7,7 @@ public:
     }
 
     string get_last_word(string s) {
-        const char DELIM { ' ' };
+        const char DELIM = ' ';
         vector<string> words;
         stringstream ss(s);
         string a_str;
