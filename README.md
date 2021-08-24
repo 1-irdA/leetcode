@@ -1,3 +1,3 @@
 # leetcode
 
-Leetcode challenges with C++.   
+Leetcode challenges.   
