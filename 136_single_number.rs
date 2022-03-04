@@ -7,7 +7,7 @@ impl Solution {
         }
         let mut occurs = HashMap::new();
         
-        for &v in nums.iter() {
+        for v in nums {
             let count = occurs.entry(v).or_insert(0);
             *count += 1;
         }
