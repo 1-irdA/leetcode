@@ -4,7 +4,7 @@ impl Solution {
         
         (1..num_rows as usize).for_each(|i| {
             result.push(vec![]);
-            (0..i + 1 as usize).for_each(|j| {
+            (0..=i as usize).for_each(|j| {
                 if j == 0 || j == i {
                     result[i].push(1); 
                 } else {
