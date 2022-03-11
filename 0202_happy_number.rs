@@ -7,14 +7,14 @@ impl Solution {
         } else if n == 4 {
             return false;
         }
-        let (mut values, mut num) = (vec![], n);
+        let (mut sum, mut num) = (0, n);
         
         loop {
-            values.push((num % 10).pow(2));
+            sum += (num % 10).pow(2);
             num /= 10;
             
             if num == 0 { break; }
         }
-        return Solution::is_happy(values.iter().sum());
+        return Solution::is_happy(sum);
     }
 }
