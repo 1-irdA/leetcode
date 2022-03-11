@@ -3,14 +3,14 @@ impl Solution {
         if (num < 10) {
             return num;
         }
-        let (mut values, mut n) = (vec![], num);
+        let (mut sum, mut n) = (0, num);
         
         loop {
-            values.push(n % 10);
+            sum += n % 10;
             n /= 10;
             
             if n == 0 { break; }
         }
-        return Solution::add_digits(values.iter().sum());
+        return Solution::add_digits(sum);
     }
 }
