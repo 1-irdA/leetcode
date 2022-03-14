@@ -9,11 +9,9 @@ impl Solution {
         }
         let mut sum = 0;
         
-        loop {
+        while (n != 0) {
             sum += (n % 10).pow(2);
             n /= 10;
-            
-            if n == 0 { break; }
         }
         return Solution::is_happy(sum);
     }
