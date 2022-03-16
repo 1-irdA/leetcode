@@ -5,10 +5,10 @@ impl Solution {
         let mut occurs = HashMap::new();
         
         for n in nums {
-            if occurs.contains_key(&n) {
-                return true;
+            match occurs.insert(n, n) {
+                Some(x) => return true,
+                None    => {}
             }
-            occurs.insert(n, 1);
         }
         false
     }
