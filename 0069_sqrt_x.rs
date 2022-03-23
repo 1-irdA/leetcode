@@ -1,3 +1,5 @@
+use std::cmp::Ordering;
+
 // Binary search
 impl Solution {
     pub fn my_sqrt(x: i32) -> i32 {
@@ -8,15 +10,14 @@ impl Solution {
         
         while start <= end {
             let mid = start + (end - start) / 2;
-            let cmp = x / mid;
             
-            if mid > cmp {
-                end = mid - 1;
-            } else if mid < cmp {
-                start = mid + 1;
-                result = mid;
-            } else {
-                return mid;
+            match mid.cmp(&(x / mid)) {
+                Ordering::Less => {
+                    start = mid + 1;
+                    result = mid;
+                },
+                Ordering::Greater => end = mid - 1,
+                Ordering::Equal => return mid
             }
         }
         result
