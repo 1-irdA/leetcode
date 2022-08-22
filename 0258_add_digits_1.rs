@@ -11,6 +11,6 @@ impl Solution {
             
             if num == 0 { break; }
         }
-        return Solution::add_digits(sum);
+        return Self::add_digits(sum);
     }
 }

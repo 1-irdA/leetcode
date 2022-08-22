@@ -13,6 +13,6 @@ impl Solution {
             sum += (n % 10).pow(2);
             n /= 10;
         }
-        return Solution::is_happy(sum);
+        return Self::is_happy(sum);
     }
 }
