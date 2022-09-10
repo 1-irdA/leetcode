@@ -24,8 +24,7 @@ public:
 };
 
 /*
-1 2 3
-next = 2, head->next = nullptr, prev = 1, head = 2
-next = 3, head->next = 1, prev = 2, head = 3
-next = 1, head->next = 2, prev = 3, head = nullptr
+1 -> 2 -> 3
+1 <- 2 -> 3
+1 <- 2 <- 3
 */

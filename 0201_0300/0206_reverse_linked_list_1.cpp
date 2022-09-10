@@ -15,8 +15,8 @@ public:
             return head;
         }
         ListNode * t = reverseList(head->next);
-        head->next->next = head;
-        head->next = nullptr;
+        head->next->next = head;        // make the next point to itself
+        head->next = nullptr;           // delete old next link
         return t;
     }
 };
