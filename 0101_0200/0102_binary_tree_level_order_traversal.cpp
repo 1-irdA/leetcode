@@ -14,7 +14,7 @@ private:
     vector<vector<int>> ans;
     
 public:
-    vector<vector<int>> zigzagLevelOrder(TreeNode* root) {
+    vector<vector<int>> levelOrder(TreeNode* root) {
         helper(root, 0);
         return ans;
     }
@@ -26,11 +26,7 @@ public:
         if (ans.size() <= level) {
             ans.push_back(vector<int>());
         }
-        if (level % 2 == 0) {
-            ans[level].push_back(root->val);
-        } else {
-            ans[level].insert(ans[level].begin(), root->val);
-        }
+        ans[level].push_back(root->val);
         helper(root->left, level + 1);
         helper(root->right, level + 1);
     }
