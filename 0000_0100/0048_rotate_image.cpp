@@ -11,8 +11,8 @@ public:
 
     void reverse(vector<vector<int>>& matrix, const int size) {
         for (int i = 0; i < size; i++) {
-            for (int start = 0, end = size - 1; start < end; start++, end--) {
-                swap(matrix[i][start], matrix[i][end]);
+            for (int j = 0; j < size / 2; j++) {
+                swap(matrix[i][j], matrix[i][size - j - 1]);
             }
         }
     }
