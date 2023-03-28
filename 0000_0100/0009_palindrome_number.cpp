@@ -6,10 +6,6 @@ public:
         
         for (i = 0; i < max && num[i] == num[num.length() - i - 1]; i++);
         
-        if (i == max) {
-            return true;
-        }
-        
-        return false;
+        return i == max;
     }
 };
